@@ -14,19 +14,19 @@
 	</modules>
 
 	<properties>
-		<tycho-version>0.19.0</tycho-version>
+		<tycho-version>1.2.0</tycho-version>
 	</properties>
 
 	<repositories>
 		<repository>
 			<id>dltk</id>
 			<layout>p2</layout>
-			<url>https://hudson.eclipse.org/hudson/job/dltk-nightly/lastSuccessfulBuild/artifact/org.eclipse.dltk.releng/build/update.site/target/site/</url>
+			<url>http://download.eclipse.org/technology/dltk/updates-dev/latest/</url>
 		</repository>
 		<repository>
-			<id>kepler</id>
+			<id>photon</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/kepler</url>
+			<url>http://download.eclipse.org/releases/photon</url>
 		</repository>
 		<repository>
 			<id>orbit</id>
@@ -57,7 +57,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<pomDependencies>consider</pomDependencies>
+					<!--pomDependencies>consider</pomDependencies-->
 					<environments>
 						<environment>
 							<os>linux</os>
@@ -67,11 +67,6 @@
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
-							<arch>x86</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
 							<arch>x86</arch>
 						</environment>
 						<environment>
